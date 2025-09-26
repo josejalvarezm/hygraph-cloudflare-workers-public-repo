@@ -1,0 +1,22 @@
+name = "your-worker-name"
+main = "src/index.ts"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+[env.production]
+name = "your-worker-name"
+
+[env.staging]
+name = "your-worker-name-staging"
+
+# Environment variables
+[vars]
+# HYGRAPH_ENDPOINT will be set as a secret
+# HYGRAPH_TOKEN will be set as a secret
+
+# Secrets (configure via `wrangler secret put`)
+# wrangler secret put HYGRAPH_ENDPOINT
+# wrangler secret put HYGRAPH_TOKEN
+
+[[triggers]]
+crons = []
